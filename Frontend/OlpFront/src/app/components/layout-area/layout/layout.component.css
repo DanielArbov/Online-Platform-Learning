@@ -1,0 +1,114 @@
+/* div {
+    height: 100%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 10% 90%;
+
+
+}
+
+div,
+div>* {
+    border: 1px rgb(169, 225, 235);
+}
+
+header,
+footer {
+    grid-column: span 2;
+}
+
+
+
+
+
+
+aside {
+
+
+    display: flex;
+    gap: 30px;
+    padding-top: 30px;
+    top: 10%;
+    background-color: #9cb3ce;
+    width: 255px;
+    padding: 20px;
+    height: 90%;
+    border-radius: 15px 0 0 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+
+aside:hover {
+    transform: translateX(40px);
+    background-color: #7eaadc;
+
+}
+*/
+main {
+    overflow: auto;
+
+}
+
+.side-menu {
+    position: fixed;
+    top: 70px;
+    left: -250px;
+    width: 250px;
+    height: calc(90% - 60px);
+    background-color: #ebf0f6 !important;
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease-in-out;
+    padding-top: 20px;
+}
+
+.side-menu {
+    z-index: 2000;
+     /* background-color: #9cb3ce;  */
+}
+
+.side-menu.open {
+    left: 0;
+}
+
+.side-menu a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background 0.3s;
+
+}
+
+
+.side-menu button {
+    display: block;
+    margin: 20px auto;
+}
+
+
+nav {
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 30px;
+    position: fixed;
+
+}
+
+nav :hover {
+    transform: translate(15px);
+}
+
+
+
+
+.active {
+    color: green;
+    font-weight: bold;
+
+
+}

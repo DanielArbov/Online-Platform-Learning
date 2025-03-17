@@ -1,0 +1,67 @@
+.container {
+
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+
+.card {
+    background-color: rgb(176, 175, 175);
+    margin-bottom: 20px;
+    /* height: 80vh; */
+}
+
+
+.card-header h4 {
+    font-size: 1.5rem;
+    color: #495057;
+    font-weight: 600;
+}
+
+.video-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+video {
+    width: 100%;
+    max-width: 700px;
+    margin: 20px;
+    display: block;
+    
+}
+
+.button-group {
+    display: flex; 
+    justify-content: flex-end;
+    margin-top: 15px;
+}
+
+.btn {
+    font-size: 1rem;
+    margin: 0 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+
+
+.btn-success {
+    background-color: #28a745;
+    border: 1px solid #28a745;
+}
+
+
+.card-footer {
+    text-align: center;
+    padding: 15px;
+}
+
+
+.card-body {
+    font-size: 1rem;
+    color: #6c757d;
+}

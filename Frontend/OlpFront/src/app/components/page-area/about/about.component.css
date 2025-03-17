@@ -1,0 +1,37 @@
+.about-container {
+    padding-top: 20px;
+    padding: 30px;
+    background-color: #cae2de;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 900px; /* הגבלת הרוחב */
+    margin: 20px auto;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6; /* שיפור קריאות */
+}
+
+.about-container h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px; /* מרווח בין הכותרת לתוכן */
+}
+
+.about-container h2 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-top: 20px; /* מרווח בין החלקים */
+    margin-bottom: 10px; /* מרווח תחתון */
+}
+
+.about-container p {
+    font-size: 1.1rem;
+    line-height: 1.8; /* שיפור קריאות */
+    color: #7f8c8d;
+    margin-bottom: 15px;
+}
+
+.about-container p:last-child {
+    font-weight: bold;
+    color: #2c3e50;
+}

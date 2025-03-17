@@ -1,0 +1,26 @@
+<div *ngIf="course" class="course-details">
+    <h3 class="course-title">📌 Course Name: <span>{{ course.title }}</span></h3>
+    <h3 class="course-description">📝 Description: <span>{{ course.description }}</span></h3>
+    <h3 class="course-date">📅 Created At: <span>{{ course.createdAt | date:'dd/MM/yyyy' }}</span></h3>
+
+    <div class="actions">
+
+        <div *ngIf="userRole===0" class="register">
+            If you want to register for this course, click
+            <button (click)="registerCourse()" class="register-btn">Here</button>
+        </div>
+
+    </div>
+
+</div>
+<div *ngIf="userRole===1" class="add-lesson-container">
+    <button (click)="toggleAddLesson()" class="add-lesson-btn">➕ Add Lesson</button>
+    <div *ngIf="showAddLesson" class="lesson-card">
+        <app-add-lesson [courseId]="course.id"></app-add-lesson>
+    </div>
+</div>
+
+
+<div>
+    <a routerLink="/courses" class="back-link">⬅️ Back To List</a>
+</div>

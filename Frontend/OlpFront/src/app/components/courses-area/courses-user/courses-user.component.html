@@ -1,0 +1,33 @@
+<div class="container mt-4">
+    <h2 class="text-center">Your Courses</h2>
+    <div *ngIf="courses?.length === 0" class="alert alert-info">
+        You have not enrolled in any courses yet.
+    </div>
+    <mat-accordion>
+        @for (p of courses; track p.id){
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title> 📌 {{ p.title }} </mat-panel-title>
+            </mat-expansion-panel-header>
+
+            <div class="lessons-list">
+                <h4>Lessons List:</h4>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        @for (l of p.lessons; track l.id){
+                        <div (click)="displayLessonDetails(l.id)" class="lesTitle">{{l.title}}</div>
+                        }
+                    </li>
+                </ul>
+            </div>
+            <div class="text-center mt-1">
+                <button (click)="unRegister(p.id)" class="btn btn-danger">
+                    Unregister From Course
+                </button>
+            </div>
+        </mat-expansion-panel>
+       
+        }
+    </mat-accordion>
+    
+</div>

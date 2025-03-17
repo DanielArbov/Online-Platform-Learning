@@ -1,0 +1,38 @@
+<div class="container mt-4">
+    <div class="card shadow p-4">
+        <h2 class="text-center mb-4">Add Lesson</h2>
+        <form [formGroup]="lessonForm" (submit)="send()">
+            <div class="mb-3">
+                <label class="form-label">Title:</label>
+                <input type="text" class="form-control" formControlName="titleControl">
+                <div class="text-danger mt-1"
+                    *ngIf="lessonForm.controls['titleControl'].errors?.['required'] && lessonForm.controls['titleControl'].touched">
+                    Missing title
+                </div>
+                <div class="text-danger mt-1"
+                    *ngIf="lessonForm.controls['titleControl'].errors?.['minlength'] && lessonForm.controls['titleControl'].touched">
+                    Title too short
+                </div>
+                <div class="text-danger mt-1"
+                    *ngIf="lessonForm.controls['titleControl'].errors?.['maxlength'] && lessonForm.controls['titleControl'].touched">
+                    Title too long
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Video URL:</label>
+                <input type="text" class="form-control" formControlName="videoUrlControl">
+                <div class="text-danger mt-1"
+                    *ngIf="lessonForm.controls['videoUrlControl'].errors?.['required'] && lessonForm.controls['videoUrlControl'].touched">
+                    Missing video URL
+                </div>
+                <div class="text-danger mt-1"
+                    *ngIf="lessonForm.controls['videoUrlControl'].errors?.['pattern'] && lessonForm.controls['videoUrlControl'].touched">
+                    Invalid URL format
+                </div>
+            </div>
+
+            <button class="btn btn-primary w-100" [disabled]="lessonForm.invalid">Add Lesson</button>
+        </form>
+    </div>
+</div>

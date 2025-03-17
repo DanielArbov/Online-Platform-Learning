@@ -1,0 +1,81 @@
+ /* div {
+    background: linear-gradient(150deg, #7eaadc, #00b894);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    height: 100%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+
+.header-container h1 {
+    font-style: italic;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1:hover {
+    color: rgb(200, 211, 211);
+}
+
+
+.login-btn {
+    background-color: #7bb3eb;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 10px;
+    right: 10px;
+
+}
+
+span {
+    position: fixed;
+    top: 10px;
+    right: 180px;
+}
+
+.login-btn:hover {
+    background-color: #1138d4;
+    transform: scale(1.15);
+
+}
+
+
+.register-btn {
+    background-color: #7bb3eb;
+    border: none;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 10px;
+    right: 80px;
+
+}
+
+.register-btn:hover {
+    background-color: #1138d4;
+  
+    transform: scale(1.15);
+  }
+
+
+.btn:hover {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease-in-out;
+}  */
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}

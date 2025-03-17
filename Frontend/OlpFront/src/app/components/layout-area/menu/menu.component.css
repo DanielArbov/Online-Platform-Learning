@@ -1,0 +1,23 @@
+nav {
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 30px;
+    position: fixed;
+
+}
+
+nav :hover {
+    transform: translate(10px);
+}
+
+
+
+
+.active {
+    color: green;
+    font-weight: bold;
+
+
+}

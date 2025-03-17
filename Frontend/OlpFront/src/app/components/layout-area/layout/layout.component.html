@@ -1,0 +1,39 @@
+<!-- <div>
+    <header>
+        <app-header></app-header>
+    </header>
+
+    <aside>
+        <app-menu></app-menu>
+    </aside>
+
+    <main>
+        <router-outlet></router-outlet>
+    </main>
+
+    <footer>
+        <app-footer></app-footer>
+    </footer>
+
+</div> -->
+
+<div>
+
+    <header>
+        <app-header (menuToggle)="toggleMenu()"></app-header>
+    </header>
+
+
+    <nav class="side-menu bg-light shadow p-3" [class.open]="menuOpen">
+        <a  routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
+        <a routerLink="/courses" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Courses</a>
+        <a *ngIf="userStore.user()?.role===0" routerLink="/MyProgress" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">My Progress</a>
+        <a *ngIf="userStore.user()?.role===1" routerLink="/addCourse" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Add Course</a>
+        <a routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">About Us</a>
+        <button class="btn btn-danger mt-3 w-100" (click)="toggleMenu()">Close</button>
+    </nav>
+
+    <main class="container mt-1">
+        <router-outlet></router-outlet>
+    </main>
+</div>

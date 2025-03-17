@@ -1,0 +1,21 @@
+<div class="table-container">
+    <h2>Courses List</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>📌 Course Name</th>
+                <th>📝 Description</th>
+                <th>📅 Created At</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (p of courses; track p.id) {
+            <tr (click)="displayDetails(p.id)">
+                <td> {{p.title}}</td>
+                <td> {{p.description }}</td>
+                <td>{{ p.createdAt | date:'dd/MM/yyyy' }}</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>

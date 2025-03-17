@@ -1,0 +1,72 @@
+.container {
+    max-width: 650px;
+    margin: 0 auto;
+    
+    padding: 20px;
+}
+
+.card {
+    background: linear-gradient(135deg, #318ce6, #e9ecef);
+    border-radius: 12px;
+    
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+ 
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+   
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.form-control {
+    border-radius: 12px;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+   
+    border: 1px solid #ccc;
+   
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.btn-primary {
+    background: #007bff;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+.text-center {
+    margin-top: 20px;
+}
+
+.text-center a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.text-danger {
+    font-size: 14px;
+}
